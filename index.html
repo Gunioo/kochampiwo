@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Kleksa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            margin-top: 20px;
+            color: #333;
+        }
+        .tabela {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        .tabela td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            vertical-align: middle;
+        }
+        .tabela img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+        }
+        .temat {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .data {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        /* Stylizacja dla tła GIF poniżej tabeli */
+        .gif-background {
+            width: 100%;
+            height: 300px;
+            background: url(niebo.gif) no-repeat center center;
+            background-size: cover;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        // Funkcja do automatycznego pobierania aktualnej daty
+        function aktualizujDate() {
+            const dataElement = document.getElementById('aktualna-data');
+            const dzisiaj = new Date();
+            const dzien = dzisiaj.getDate();
+            const miesiac = dzisiaj.getMonth() + 1; // Miesiące są liczone od 0
+            const rok = dzisiaj.getFullYear();
+            dataElement.textContent = `${dzien}.${miesiac}.${rok}`;
+        }
+        window.onload = aktualizujDate;
+    </script>
+</head>
+<body>
+    <h1>KLASA V</h1>
+    <h2>Maksymilian Lipiec</h2>
+
+    <!-- Tabelka z tematem lekcji, głównym zdjęciem i datą -->
+    <table class="tabela">
+        <tr>
+            <td class="temat">Temat lekcji</td>
+            <td>
+                <a href="https://rrogacz.pl/html-tabele">
+                    <img src="ColeS5.webp" alt="Zdjęcie przykładowe">
+                </a>
+            </td>
+            <td class="data" id="aktualna-data"></td>
+        </tr>
+    </table>
+
+    <!-- Sekcja z tłem w formie GIF-a poniżej tabeli -->
+    <div class="gif-background"></div>
+
+</body>
+</html>
