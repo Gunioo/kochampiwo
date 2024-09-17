@@ -1,2 +1,0 @@
-# kochampiwo
-kochaćdisa
